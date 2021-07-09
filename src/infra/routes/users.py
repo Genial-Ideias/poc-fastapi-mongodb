@@ -19,3 +19,8 @@ router = APIRouter(
 @inject
 def create_user(user: CreateUserModel, service: CreateUserService = Depends(Provide[Container.user_container.create_user_service])):
     return service.create(user)
+
+@router.get('/')
+@inject
+def list_users(service: CreateUserService = Depends(Provide[Container.user_container.create_user_service])):
+    return service.list_users()

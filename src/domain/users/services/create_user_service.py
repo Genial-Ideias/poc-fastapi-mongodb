@@ -13,3 +13,8 @@ class CreateUserService:
     def _create(self, create_user_model: CreateUserModel) -> UserModel:
         user = self._repository.create(create_user_model)
         return user
+
+    def list_users(self) -> UserModel:
+        users = self._repository.list_users()
+        return users
+

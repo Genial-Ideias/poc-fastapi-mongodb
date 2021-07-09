@@ -10,7 +10,6 @@ class UserContainer(containers.DeclarativeContainer):
         UserRepository
     )
 
-
     create_user_service = providers.Factory(
         CreateUserService,
         repository=user_repository
