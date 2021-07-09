@@ -3,11 +3,9 @@ from pydantic import BaseModel
 
 
 class UserModel(BaseModel):
-    id: int
+    id: str
     name: str
     email: str
-    is_active: bool
-
     password: Optional[str]
 
 
